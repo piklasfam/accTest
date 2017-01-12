@@ -1,0 +1,16 @@
+<select name="accountType" required data-ng-change="vm.getAccountsByType()" data-ng-model="vm.accountType" >
+    <option  value="0" >Choose type</option>
+    <option  ng-repeat="type in vm.accountTypes" value="{{type.name}}" ng-bind-html="type.name"></option>
+</select>
+<h4 class="row">
+	<span class="col-md-3" >Account Number</span>
+	<span class="col-md-3" >Balance</span>
+	<span class="col-md-3" >Account Type</span>
+	<span class="col-md-3" >Favourite</span>
+</h4>
+<div ng-repeat ="item in vm.data | toSort " class="row">
+	<div class="col-md-3" ng-bind-html='item.accountNumber'></div>
+	<div class="col-md-3" ng-bind-html='item.balance'></div>
+	<div class="col-md-3" ng-bind-html='item.type'></div>
+	<div class="col-md-3" ng-bind-html='item.favourite'></div>
+</div>
