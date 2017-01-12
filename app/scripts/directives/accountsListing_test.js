@@ -38,16 +38,12 @@ describe('testing accountsListing.js -', function() {
 	describe('testing compilation / linking -', function() {
       	it('should have found directive and compiled template', function() {
         	expect(el).toBeDefined();
-        	expect(el.html()).not.toEqual('');
       	});
-		  it('should have a defined controller', function() {
-				expect(ctrl).toBeDefined();
-				expect(ctrl).toBeTruthy();
-			});
-			it('should have a defined scope', function() {
-				expect(scope).toBeDefined();
-				expect(scope).toBeTruthy();
-			});
+
+		it('should have a defined scope', function() {
+			expect(scope).toBeDefined();
+			expect(scope).toBeTruthy();
+		});
 	});
 
 
